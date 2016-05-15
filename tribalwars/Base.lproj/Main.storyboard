@@ -8,6 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tribalwars" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -17,29 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="JQ8-y6-EaL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="9am-D4-Bk9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="0n0-O5-Ncc">
-                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="nh7-eT-YIc">
+                                <rect key="frame" x="0.0" y="537" width="600" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="sPk-vy-ezX"/>
+                                    <constraint firstAttribute="height" constant="30" id="qCt-tg-NEL"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JQ8-y6-EaL" secondAttribute="bottom" id="2oT-cZ-IVJ"/>
-                            <constraint firstItem="JQ8-y6-EaL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FMj-O2-I0d"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0n0-O5-Ncc" secondAttribute="bottom" id="Pe9-GA-6wf"/>
-                            <constraint firstAttribute="trailing" secondItem="0n0-O5-Ncc" secondAttribute="trailing" id="VdE-k6-rOW"/>
-                            <constraint firstItem="0n0-O5-Ncc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XKe-AN-WnW"/>
-                            <constraint firstAttribute="trailing" secondItem="JQ8-y6-EaL" secondAttribute="trailing" id="pbj-rb-OPr"/>
-                            <constraint firstItem="JQ8-y6-EaL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ubp-Yl-Pmk"/>
+                            <constraint firstAttribute="trailing" secondItem="nh7-eT-YIc" secondAttribute="trailing" id="6vZ-qv-ytF"/>
+                            <constraint firstItem="9am-D4-Bk9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bbb-3t-IJw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9am-D4-Bk9" secondAttribute="bottom" id="Bz9-Bm-0tf"/>
+                            <constraint firstItem="nh7-eT-YIc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DdI-1t-hD9"/>
+                            <constraint firstAttribute="trailing" secondItem="9am-D4-Bk9" secondAttribute="trailing" id="mJC-rw-mVc"/>
+                            <constraint firstItem="9am-D4-Bk9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nwf-tF-nQt"/>
+                            <constraint firstAttribute="bottom" secondItem="nh7-eT-YIc" secondAttribute="bottom" id="wb7-hO-lPk"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="540" y="440"/>
         </scene>
