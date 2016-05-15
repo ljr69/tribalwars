@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -27,17 +29,59 @@
                                     <constraint firstAttribute="height" constant="30" id="qCt-tg-NEL"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="iyY-EP-fwb">
+                                <rect key="frame" x="20" y="352" width="152" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="ITB-BD-bpg"/>
+                                    <constraint firstAttribute="height" constant="185" id="Pt4-UF-Zcd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="fcW-j7-scd">
+                                <rect key="frame" x="415" y="344" width="165" height="208"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="C7G-Du-ZQy"/>
+                                    <constraint firstAttribute="height" constant="128" id="CNQ-YA-VMh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="E8o-ng-vbj"/>
+                                    <constraint firstAttribute="height" constant="128" id="MIC-jd-YpJ"/>
+                                    <constraint firstAttribute="height" constant="185" id="ZZm-hF-ktc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="nC0-Zs-D9d"/>
+                                    <constraint firstAttribute="width" constant="105" id="zSc-sj-Os0"/>
+                                    <constraint firstAttribute="width" secondItem="fcW-j7-scd" secondAttribute="height" multiplier="105:128" id="zjq-gZ-hcJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="C7G-Du-ZQy"/>
+                                        <exclude reference="CNQ-YA-VMh"/>
+                                        <exclude reference="E8o-ng-vbj"/>
+                                        <exclude reference="MIC-jd-YpJ"/>
+                                        <exclude reference="nC0-Zs-D9d"/>
+                                        <exclude reference="zSc-sj-Os0"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nh7-eT-YIc" firstAttribute="top" secondItem="fcW-j7-scd" secondAttribute="bottom" id="4Gh-RA-E1A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fcW-j7-scd" secondAttribute="trailing" constant="20" id="5IM-Wp-da9"/>
                             <constraint firstAttribute="trailing" secondItem="nh7-eT-YIc" secondAttribute="trailing" id="6vZ-qv-ytF"/>
+                            <constraint firstAttribute="trailing" secondItem="fcW-j7-scd" secondAttribute="trailing" constant="25" id="9D0-LH-wmN"/>
                             <constraint firstItem="9am-D4-Bk9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bbb-3t-IJw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9am-D4-Bk9" secondAttribute="bottom" id="Bz9-Bm-0tf"/>
                             <constraint firstItem="nh7-eT-YIc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DdI-1t-hD9"/>
+                            <constraint firstItem="nh7-eT-YIc" firstAttribute="top" secondItem="fcW-j7-scd" secondAttribute="bottom" constant="-10" id="PDC-Y9-xns"/>
+                            <constraint firstItem="nh7-eT-YIc" firstAttribute="top" secondItem="iyY-EP-fwb" secondAttribute="bottom" constant="-17" id="REj-46-5ti"/>
+                            <constraint firstItem="iyY-EP-fwb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="RrH-Jh-Ey3"/>
                             <constraint firstAttribute="trailing" secondItem="9am-D4-Bk9" secondAttribute="trailing" id="mJC-rw-mVc"/>
                             <constraint firstItem="9am-D4-Bk9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nwf-tF-nQt"/>
                             <constraint firstAttribute="bottom" secondItem="nh7-eT-YIc" secondAttribute="bottom" id="wb7-hO-lPk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4Gh-RA-E1A"/>
+                                <exclude reference="5IM-Wp-da9"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
             </objects>
@@ -46,6 +90,8 @@
     </scenes>
     <resources>
         <image name="bg" width="1024" height="677"/>
+        <image name="enemy" width="241" height="348"/>
         <image name="ground" width="1024" height="106"/>
+        <image name="player" width="406" height="441"/>
     </resources>
 </document>
