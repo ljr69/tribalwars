@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -21,6 +22,8 @@ class ViewController: UIViewController {
     var player1: Player!
     var player2: Player!
     
+    var victorySound: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,13 +33,28 @@ class ViewController: UIViewController {
         p1HpLbl.text = "\(player1.hp) HP"
         p2HpLbl.text = "\(player2.hp) HP"
         
+        let path = NSBundle.mainBundle().pathForResource("Evil_laugh", ofType: "mp3")
+        let soundURL = NSURL(fileURLWithPath: path!)
+        
+        do {
+            try victorySound = AVAudioPlayer(contentsOfURL: soundURL)
+            victorySound.prepareToPlay()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
     }
 
     @IBAction func p1AttackPressed(sender: AnyObject) {
+        
         player2.attacked(player1.attackPwr)
         
         if !player2.isAlive {
-            printMsgLbl.text = "\(player1.name) is Victorious!"
+            
+            p2HpLbl.text = "DEAD!"
+            p1HpLbl.hidden = true
+            processVictory(player2.name)
+            
         } else {
             p2HpLbl.text = "\(player2.hp)"
         }
@@ -44,7 +62,34 @@ class ViewController: UIViewController {
     }
 
     @IBAction func p2AttackPressed(sender: AnyObject) {
+        
+        player1.attacked(player1.attackPwr)
+        
+        if !player1.isAlive {
+            
+            p1HpLbl.text = "DEAD!"
+            p2HpLbl.hidden = true
+            processVictory(player2.name)
+            
+        } else {
+            p1HpLbl.text = "\(player1.hp)"
+        }
     }
     
+    func processVictory(player: String) {
+        
+        printMsgLbl.text = "\(player) is Victorious!"
+        playSound()
+        
+    }
+    
+    func playSound() {
+        
+        if victorySound.playing {
+            victorySound.stop()
+        }
+        
+        victorySound.play()
+    }
 }
 

@@ -74,7 +74,7 @@
                                     <constraint firstAttribute="width" constant="442" id="I5t-zT-TDD"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1 attacks player 2 for 50 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfG-KL-fBb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press ATTACK to start kicking ass!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfG-KL-fBb">
                                 <rect key="frame" x="98" y="559" width="399" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -145,6 +145,7 @@
                             <constraint firstItem="iyY-EP-fwb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="RrH-Jh-Ey3"/>
                             <constraint firstItem="ywT-Hw-VXn" firstAttribute="centerY" secondItem="NIy-5r-5Fe" secondAttribute="centerY" id="WK7-7X-yTI"/>
                             <constraint firstItem="wkM-OS-M6e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="120" id="eHm-ge-azh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nfG-KL-fBb" secondAttribute="bottom" constant="16" id="gA9-la-6d8"/>
                             <constraint firstItem="fcW-j7-scd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h5h-VD-zj2"/>
                             <constraint firstAttribute="trailing" secondItem="9am-D4-Bk9" secondAttribute="trailing" id="mJC-rw-mVc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cJs-4c-Ahm" secondAttribute="trailing" constant="36" id="nra-aP-6Pa"/>
@@ -153,6 +154,7 @@
                             <constraint firstItem="5Tn-Sg-hmx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhp-e5-Rw3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ROF-N0-6Qc" secondAttribute="trailing" constant="11" id="tDh-6x-Ibw"/>
                             <constraint firstItem="ywT-Hw-VXn" firstAttribute="centerX" secondItem="NIy-5r-5Fe" secondAttribute="centerX" id="tU3-Xq-eRF"/>
+                            <constraint firstItem="nfG-KL-fBb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ue7-Vr-3Zc"/>
                             <constraint firstAttribute="bottom" secondItem="nh7-eT-YIc" secondAttribute="bottom" id="wb7-hO-lPk"/>
                             <constraint firstItem="ywT-Hw-VXn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="zaM-nO-PYX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Tn-Sg-hmx" secondAttribute="bottom" constant="6" id="zrW-bb-3dy"/>
