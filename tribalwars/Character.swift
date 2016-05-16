@@ -40,7 +40,10 @@ class Character {
     }
     
     func attacked(attackPwr: Int) {
-        self._hp -= attackPwr
+        
+        let attack = arc4random_uniform(UInt32(attackPwr))
+        self._hp -= Int(attack)
+        
     }
     
 }
