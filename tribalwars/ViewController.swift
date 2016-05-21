@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        player1 = Player(name: "Player 1", hp: 100, attackPwr: 10)
-        player2 = Player(name: "Player 2", hp: 100, attackPwr: 10)
+        player1 = Player(name: "Ugly Troll", hp: 50, attackPwr: 20)
+        player2 = Player(name: "Brave Hero", hp: 75, attackPwr: 10)
         
         p1HpLbl.text = "\(player1.hp) HP"
         p2HpLbl.text = "\(player2.hp) HP"
@@ -47,6 +47,7 @@ class ViewController: UIViewController {
 
     @IBAction func p1AttackPressed(sender: AnyObject) {
         
+        printMsgLbl.text = "\(player1.name) attacks \(player2.name)"
         player2.attacked(player1.attackPwr)
         
         if !player2.isAlive {
@@ -63,6 +64,7 @@ class ViewController: UIViewController {
 
     @IBAction func p2AttackPressed(sender: AnyObject) {
         
+        printMsgLbl.text = "\(player2.name) attacks \(player1.name)"
         player1.attacked(player1.attackPwr)
         
         if !player1.isAlive {
